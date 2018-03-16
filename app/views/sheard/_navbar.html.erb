@@ -1,0 +1,15 @@
+<header>
+  <nav>
+    <% if current_page?(root_path) || current_page?("customers/index") %>
+      <%= link_to "Alphabetized", "/customers/alphabetized" %>
+      <%= link_to "Missing email", "customers/missing_email" %>
+    <% elsif current_page?(customers_alphabetized_url)%>
+      <%= link_to "Customers", root_path %>
+      <%= link_to "Missing email", "/customers/missing_email" %>
+    <% elsif current_page?(customers_missing_email_url)%>
+      <%= link_to "Customers", root_path %>
+      <%= link_to "Alphabetized", "/customers/alphabetized" %>
+    <% end %>
+
+  </nav>
+</header>
