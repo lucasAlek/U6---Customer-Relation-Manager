@@ -1,22 +1,18 @@
-<div class="continer">
-  <h3><%= customer.full_name %> </h3>
+<div class="grid_item">
+  <h2><b><%= customer.full_name %></b></h2>
 
   <%= image_tag(customer.image,size:"300x200") %>
 
   <% if customer.phone_number != " " %>
-  <p> <%= customer.phone_number %></p>
+  <h4> <%= customer.phone_number %></h4>
   <% end %>
 
   <% if customer.email_address != " " %>
-  <p><%= customer.email_address %></p>
+  <h4><%= customer.email_address %></h4>
   <% end %>
 
   <% if customer.notes != " " %>
-  <p><%= customer.notes %></p>
+  <h4><%= customer.notes %></h4>
   <% end %>
 
 </div>
-
-
-<!--image-->
-<!--feilds-->
